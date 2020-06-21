@@ -4,14 +4,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 install_requires = list()
-if sys.platform == "linux":
+if sys.platform == "linux2" or sys.platform == "linux":
     install_requires = ["smbus2", "xinabox-CORE",]
 else:
     install_requires = ["xinabox-CORE",]
 
 setuptools.setup(
     name="xinabox-SL06",
-    version="0.0.5",
+    version="0.0.6",
     author="Luqmaan Baboo",
     author_email="luqmaanbaboo@gmail.com",
     description="Proximity, gesture, light and colour sensor",
