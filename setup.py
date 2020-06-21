@@ -11,14 +11,14 @@ else:
 
 setuptools.setup(
     name="xinabox-SL06",
-    version="0.0.4",
+    version="0.0.5",
     author="Luqmaan Baboo",
     author_email="luqmaanbaboo@gmail.com",
     description="Proximity, gesture, light and colour sensor",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/xinabox/Python-SL06",
-    install_requires=install_requires,
+    install_requires=["smbus2", "xinabox-CORE",],
     py_modules=["xSL06",],
     packages=setuptools.find_packages(),
     classifiers=[
