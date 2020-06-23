@@ -11,7 +11,7 @@ else:
 
 setuptools.setup(
     name="xinabox-SL06",
-    version="0.0.7",
+    version="0.0.8",
     author="Luqmaan Baboo",
     author_email="luqmaanbaboo@gmail.com",
     description="Proximity, gesture, light and colour sensor",
