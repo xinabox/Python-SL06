@@ -665,7 +665,7 @@ class xSL06:
         val = 0
         try:
             val = self.i2c.write_read(self.addr,APDS9960_CONTROL, 1)[0]
-        except PeripheralError as e:
+        except Exception as e:
             #raise e
             pass
 
@@ -676,7 +676,7 @@ class xSL06:
 
         try:
             self.i2c.write_bytes(self.addr,APDS9960_CONTROL, val)
-        except PeripheralError as e:
+        except Exception as e:
             #raise e
             pass
 
@@ -698,7 +698,7 @@ class xSL06:
         val = 0
         try:
             val = self.i2c.write_read(self.addr,APDS9960_CONTROL, 1)[0]
-        except PeripheralError as e:
+        except Exception as e:
             #raise e
             pass
 
@@ -709,7 +709,7 @@ class xSL06:
 
         try:
             self.i2c.write_bytes(self.addr,APDS9960_CONTROL, val)
-        except PeripheralError as e:
+        except Exception as e:
             #raise e
             pass
 
@@ -730,7 +730,7 @@ class xSL06:
         val = 0
         try:
             val = self.i2c.write_read(self.addr,APDS9960_CONTROL, 1)[0]
-        except PeripheralError as e:
+        except Exception as e:
             #raise e
             pass
 
@@ -791,7 +791,7 @@ class xSL06:
         def setProxIntLowThresh(self, threshold):
             try:
                 self.i2c.write_bytes(self.addr,APDS9960_PILT, threshold)
-            except PeripheralError as e:
+            except Exception as e:
                 #raise e
                 pass
 
@@ -992,7 +992,7 @@ class xSL06:
         try:
             self.i2c.write_bytes(self.addr,APDS9960_AILTL, val_low)
             self.i2c.write_bytes(self.addr,APDS9960_AILTH, val_high)
-        except PeripheralError as e:
+        except Exception as e:
             #raise e
             pass
 
@@ -1044,7 +1044,7 @@ class xSL06:
     def getProximityIntHighThreshold(self, threshold):
         try:
             threshold = self.i2c.write_read(self.addr,APDS9960_PIHT, 1)[0]
-        except PeripheralError as e:
+        except Exception as e:
             #raise e
             pass
         return True
@@ -1052,7 +1052,7 @@ class xSL06:
     def setProximityIntHighThreshold(self, threshold):
         try:
             self.i2c.write_bytes(self.addr,APDS9960_PIHT, threshold)
-        except PeripheralError as e:
+        except Exception as e:
             #raise e
             pass
         return True
